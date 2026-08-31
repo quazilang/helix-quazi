@@ -1,0 +1,17 @@
+[language-server.quazi]
+command = "qz"
+args = ["lsp"]
+
+[[language]]
+name = "quazi"
+language-id = "quazi"
+scope = "source.quazi"
+file-types = ["qz"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["quazi"]
+grammar = "quazi"
+
+[[grammar]]
+name = "quazi"
+source = { git = "https://github.com/quazilang/tree-sitter", rev = "685ebbf2760a443262a7c8deb51b04f25d2e78c9" }
