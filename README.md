@@ -6,7 +6,7 @@ project's `.helix/languages.toml`. Copy `runtime/queries/quazi/` into the
 matching Helix runtime query directory.
 
 It registers `.qz` as `source.quazi`, launches `qz lsp`, and pins the Quazi
-Tree-sitter grammar to commit `22c684a0d89d5be381d07b6460528db9bee4fcad`.
+Tree-sitter grammar to commit `1bc33fcdd937635326355ce5dc1767ab17701194`.
 After installing the fragment, run:
 
 ```bash

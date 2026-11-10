@@ -14,4 +14,4 @@ grammar = "quazi"
 
 [[grammar]]
 name = "quazi"
-source = { git = "https://github.com/quazilang/tree-sitter", rev = "22c684a0d89d5be381d07b6460528db9bee4fcad" }
+source = { git = "https://github.com/quazilang/tree-sitter", rev = "1bc33fcdd937635326355ce5dc1767ab17701194" }
