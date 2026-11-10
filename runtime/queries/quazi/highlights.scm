@@ -2,7 +2,7 @@
 [
   "fn" "struct" "union" "trait" "enum" "impl" "type" "import"
   "for" "if" "else" "match" "ret"
-  "const" "var" "pub" "unsafe" "as" "dyn" "for"
+  "const" "var" "pub" "unsafe" "qo" "as" "dyn" "for"
 ] @keyword
 
 ; Control flow keywords get a more specific scope
@@ -36,6 +36,8 @@
 
 ; Parameters
 (param name: (identifier) @variable.parameter)
+(variadic_param name: (identifier) @variable.parameter)
+(trait_param name: (identifier) @variable.parameter)
 
 ; Struct fields
 (struct_field name: (identifier) @property)
@@ -52,6 +54,11 @@
 (integer_literal) @number
 (float_literal)   @number.float
 (string_literal)  @string
+(escape_sequence) @string.escape
+(brace_escape) @string.escape
+(interpolation "{" @punctuation.special "}" @punctuation.special)
+(format_placeholder) @punctuation.special
+(format_spec) @string.special
 (byte_string_literal) @string
 (raw_string_literal) @string
 (bool_literal)    @boolean
@@ -61,12 +68,12 @@
 
 ; Operators
 [
-  "+" "-" "*" "/" "%" "**" "&" "|" "^" "~" "<<" ">>"
+  "+" "-" "*" "/" "%" "**" "&" "|" "^" "<<" ">>"
   "=" "==" "!=" "<" "<=" ">" ">="
   "+=" "-=" "*=" "/=" "%="
   "++" "--"
-  "&&" "||" "!"
-  "=>" ".."
+  "&&" "||" "!" "?"
+  "=>" ".." "..="
 ] @operator
 
 ; Punctuation
