@@ -13,7 +13,7 @@ set -euo pipefail
 : "${QZ:=qz}"
 repository_dir=$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 grammar_dir=$(CDPATH= cd -- "${QUAZI_TREE_SITTER_DIR:-$repository_dir/../tree-sitter}" && pwd)
-qz_path=$(command -v -- "$QZ")
+qz_path=$(type -P -- "$QZ")
 work_dir=$(mktemp -d)
 trap 'rm -rf -- "$work_dir"' EXIT
 
